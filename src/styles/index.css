@@ -225,7 +225,7 @@ body, button {
 }
 
 .profile-img {
-  width: 200px;
+  width: 17rem;
   border-radius: 6px;
 }
 
@@ -343,7 +343,11 @@ body, button {
     transform: translateY(100px);
   }
   .skill-item {
+    height: 130px;
     width: 200px;
+  }
+  .logos {
+    height: 75px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -354,5 +358,20 @@ body, button {
 @media screen and (min-width: 1500px) {
   .about-content {
     gap: 12em;
+  }
+  .skill-item {
+    height: 175px;
+    width: 200px;
+  }
+  .skill-item::before {
+    border: 10px solid transparent;
+  }
+  .logos {
+    height: 100px;
+  }
+}
+@media screen and (min-width: 1800px) {
+  .skill-item {
+    width: 250px;
   }
 }/*# sourceMappingURL=index.css.map */

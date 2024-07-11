@@ -197,7 +197,6 @@ $hero-color: #138ee0;
     gap: 2em;
     text-align: center;
     flex-wrap: wrap;
-    // align-self: center;
     margin: auto;
 }
 
@@ -216,7 +215,7 @@ $hero-color: #138ee0;
 }
 
 .profile-img {
-    width: 200px;
+    width: 17rem;
     border-radius: 6px;
 }
 
@@ -345,7 +344,12 @@ $hero-color: #138ee0;
     }
 
     .skill-item {
+        height: 130px;
         width: 200px;
+    }
+
+    .logos {
+        height: 75px;
     }
 }
 
@@ -359,5 +363,22 @@ $hero-color: #138ee0;
 @media screen and (min-width: 1500px) {
     .about-content {
         gap: 12em;
+    }
+    .skill-item {
+        height: 175px;
+        width: 200px;
+        &::before {
+            border: 10px solid transparent;
+        }
+    }
+
+    .logos {
+        height: 100px;
+    }
+}
+
+@media screen and (min-width: 1800px) {
+    .skill-item {
+        width: 250px;
     }
 }
