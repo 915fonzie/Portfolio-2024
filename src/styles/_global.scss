@@ -7,4 +7,16 @@
 html, body {
     margin: 0;
     padding: 0;
+    color: $text-color;
+    font-family: Jost, sans-serif;
+    font-size: 12px;
+}
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+body, button {
+    cursor: url("../assets/arrowhead.svg"), auto;
 }
