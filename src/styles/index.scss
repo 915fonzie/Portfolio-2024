@@ -354,3 +354,9 @@ $hero-color: #138ee0;
     background-color: transparent;
     min-height: 100vh;
 }
+
+@media screen and (min-width: 1500px) {
+    .about-content {
+        gap: 12em;
+    }
+}
