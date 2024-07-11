@@ -3,6 +3,7 @@ import Canvas from '../components/Canvas'
 import Hero from '../components/Hero'
 import NavBar from '../components/NavBar'
 import About from '../components/About'
+import { mainBg } from '../particles'
 import '../styles/index.css'
 
 
@@ -16,7 +17,7 @@ export default function Home() {
     return (
         <main className='home-container'>
             <div className='main-background'>
-                <Canvas canvas="../../main-bg.json" className="particles-container" id="main-particles-bg"/>
+                <Canvas canvas={mainBg} className="particles-container" id="main-particles-bg"/>
             </div>
             <Hero aboutRef={aboutRef} homeRef={homeRef}/>
             <NavBar refs={{homeRef, aboutRef, projectsRef, contactRef}}/>

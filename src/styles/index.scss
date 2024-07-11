@@ -192,11 +192,13 @@ $hero-color: #138ee0;
 
 .about-content {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
     gap: 2em;
     text-align: center;
     flex-wrap: wrap;
+    align-self: center;
 }
 
 .about-info {
@@ -228,7 +230,7 @@ $hero-color: #138ee0;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 1.5em;
+    gap: 0.5em;
 }
 
 .logos {
@@ -260,9 +262,15 @@ $hero-color: #138ee0;
     }
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 600px) {
     html {
         font-size: 14px;
+    }
+
+    .about-info {
+        p {
+            width: 400px;
+        }
     }
 }
 
@@ -278,6 +286,10 @@ $hero-color: #138ee0;
         }
     }
 
+    .about-content {
+        flex-direction: row;
+    }
+
     .about-info {
         left: -300px;
         opacity: 0;
@@ -291,9 +303,14 @@ $hero-color: #138ee0;
         transform: translateX(300px);
     }
 
+    .skills {
+        gap: 1.5em;
+    }
+
     .skill-column-up, .skill-column-down {
         opacity: 0;
         transition: transform 1.7s, opacity 1s;
+        gap: 1.5em;
     }
 
     .skill-column-up {

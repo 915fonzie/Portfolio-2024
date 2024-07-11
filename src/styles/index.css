@@ -202,11 +202,13 @@ body, button {
 
 .about-content {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
   gap: 2em;
   text-align: center;
   flex-wrap: wrap;
+  align-self: center;
 }
 
 .about-info {
@@ -238,7 +240,7 @@ body, button {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 1.5em;
+  gap: 0.5em;
 }
 
 .logos {
@@ -273,9 +275,12 @@ body, button {
   margin-top: 0.5em;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 600px) {
   html {
     font-size: 14px;
+  }
+  .about-info p {
+    width: 400px;
   }
 }
 @media screen and (min-width: 1000px) {
@@ -287,6 +292,9 @@ body, button {
   }
   .navbar button {
     margin-right: 2em;
+  }
+  .about-content {
+    flex-direction: row;
   }
   .about-info {
     left: -300px;
@@ -300,9 +308,13 @@ body, button {
     opacity: 1;
     transform: translateX(300px);
   }
+  .skills {
+    gap: 1.5em;
+  }
   .skill-column-up, .skill-column-down {
     opacity: 0;
     transition: transform 1.7s, opacity 1s;
+    gap: 1.5em;
   }
   .skill-column-up {
     bottom: -100px;
