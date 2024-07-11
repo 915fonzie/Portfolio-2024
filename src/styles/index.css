@@ -176,9 +176,8 @@ body, button {
 .section-heading {
   position: relative;
   font-size: 4rem;
-  margin: auto;
-  margin-top: 1.5em;
-  margin-bottom: 1em;
+  margin: 0 auto;
+  margin-top: 2em;
 }
 
 .about {
@@ -208,11 +207,12 @@ body, button {
   gap: 2em;
   text-align: center;
   flex-wrap: wrap;
-  align-self: center;
+  margin: auto;
 }
 
 .about-info {
   position: relative;
+  margin-top: 3em;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -273,6 +273,18 @@ body, button {
 .skill-item p {
   margin: 0;
   margin-top: 0.5em;
+}
+
+.projects {
+  height: 100vh;
+  background-color: transparent;
+  min-height: 100vh;
+}
+
+.contact {
+  height: 50vh;
+  background-color: transparent;
+  min-height: 100vh;
 }
 
 @media screen and (min-width: 600px) {
@@ -339,18 +351,6 @@ body, button {
     flex-wrap: nowrap;
   }
 }
-.projects {
-  height: 100vh;
-  background-color: transparent;
-  min-height: 100vh;
-}
-
-.contact {
-  height: 50vh;
-  background-color: transparent;
-  min-height: 100vh;
-}
-
 @media screen and (min-width: 1500px) {
   .about-content {
     gap: 12em;
