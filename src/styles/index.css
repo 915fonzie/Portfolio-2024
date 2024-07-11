@@ -273,6 +273,7 @@ body, button {
 .skill-item p {
   margin: 0;
   margin-top: 0.5em;
+  font-size: 1.1rem;
 }
 
 .projects {
