@@ -184,6 +184,7 @@ body, button {
   background-color: transparent;
   display: flex;
   flex-direction: column;
+  align-items: center;
   min-height: 100vh;
   margin-bottom: 4em;
 }
@@ -207,7 +208,8 @@ body, button {
   gap: 2em;
   text-align: center;
   flex-wrap: wrap;
-  margin: auto;
+  width: 100%;
+  max-width: 1800px;
 }
 
 .about-info {
@@ -357,22 +359,14 @@ body, button {
   }
 }
 @media screen and (min-width: 1500px) {
-  .about-content {
-    gap: 12em;
-  }
   .skill-item {
     height: 175px;
     width: 200px;
   }
   .skill-item::before {
-    border: 10px solid transparent;
+    border: 8px solid transparent;
   }
   .logos {
     height: 100px;
-  }
-}
-@media screen and (min-width: 1800px) {
-  .skill-item {
-    width: 250px;
   }
 }/*# sourceMappingURL=index.css.map */
