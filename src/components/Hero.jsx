@@ -1,6 +1,7 @@
 import React from 'react'
 import Canvas from './Canvas'
 import { heroBg } from '../particles'
+import arrowDownImg from '../assets/arrow-down.svg'
 
 export default function Hero({homeRef, aboutRef}) {
     return (
@@ -17,7 +18,9 @@ export default function Hero({homeRef, aboutRef}) {
                     }}
                     className='hero-btn'
                 >
-                    View my work
+                    <div>
+                        View my work <img src={arrowDownImg} />
+                    </div>
                 </button>
         </div>
     </div>

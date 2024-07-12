@@ -29,6 +29,17 @@
     transform: translateX(0);
   }
 }
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-1rem);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 *,
 *::before,
 *::after {
@@ -112,6 +123,7 @@ body, button {
 
 .hero-btn {
   position: relative;
+  vertical-align: middle;
   font-size: 2.2rem;
   line-height: 0;
   width: 20rem;
@@ -151,6 +163,12 @@ body, button {
 }
 .hero-btn:hover::after, .hero-btn:focus::after {
   transition-delay: 250ms;
+}
+.hero-btn div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
 }
 
 .navbar {
@@ -379,6 +397,62 @@ section {
   text-align: right;
 }
 
+.contact {
+  margin: 0 auto;
+  margin-bottom: 10em;
+  width: 95%;
+}
+.contact p {
+  font-size: 1.4rem;
+}
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  width: 100%;
+  max-width: 500px;
+}
+.contact form input, .contact form textarea {
+  border: none;
+  background-color: #282828;
+  color: white;
+  padding: 1em;
+  height: 4rem;
+}
+.contact form textarea {
+  height: 8rem;
+}
+.contact form button {
+  font-size: 1.6em;
+  font-weight: 600;
+  align-self: flex-end;
+  background-color: transparent;
+  border: none;
+  color: #dddddd;
+}
+.contact form button div {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0.8em 1.2em;
+  background-color: #138ee0;
+}
+
+.contact-heading::before {
+  position: absolute;
+  content: "";
+  border-bottom: 18px solid #138ee0;
+  width: 12.9rem;
+  margin: 0 auto;
+  left: 2rem;
+  top: 3.6rem;
+  z-index: -1;
+}
+
 @media screen and (min-width: 600px) {
   html {
     font-size: 14px;
@@ -493,7 +567,67 @@ section {
   .project-align-right .project-text .project-links {
     align-items: flex-end;
   }
+  .contact form button div {
+    background-color: transparent;
+    margin-bottom: 0;
+  }
+  .contact form button div::after {
+    position: absolute;
+    content: "";
+    height: 2px;
+    background-color: #138ee0;
+    width: 100%;
+    bottom: 1px;
+    display: block;
+    transform-origin: bottom;
+    transition: all 0.25s;
+    z-index: -1;
+  }
+  .contact form button div:hover::after {
+    height: 100%;
+  }
 }
+footer {
+  position: relative;
+  height: 10rem;
+  background-color: #282828;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+footer a {
+  cursor: pointer;
+}
+footer div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  margin-top: 3em;
+}
+footer img {
+  width: 3rem;
+}
+footer p {
+  margin-top: 0.2em;
+  font-size: 1.2rem;
+}
+footer button {
+  position: absolute;
+  top: -25px;
+  border: none;
+  background-color: #138ee0;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+footer button:hover {
+  cursor: pointer;
+  animation-name: bounce;
+}
+
 @media screen and (min-width: 1200px) {
   .about-content {
     flex-wrap: nowrap;

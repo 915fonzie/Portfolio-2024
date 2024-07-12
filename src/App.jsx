@@ -6,6 +6,13 @@ import About from './components/About'
 import Projects from './components/Projects'
 import Contact from './components/Contact'
 import { mainBg } from './particles'
+import facebookIcon from './assets/icons/facebook.svg'
+import emailIcon from './assets/icons/email.svg'
+import instagramIcon from './assets/icons/instagram.svg'
+import githubIcon from './assets/icons/github.svg'
+import linkedInIcon from './assets/icons/linkedin.svg'
+import arrowUpIcon from './assets/arrow-up.svg'
+
 import './styles/index.css'
 
 
@@ -26,7 +33,25 @@ export default function App() {
             <About aboutRef={aboutRef} />
             <Projects projectsRef={projectsRef} />
             <Contact contactRef={contactRef} />
-            <footer>Alfonso Pruneda © 2024</footer>
+            <footer>
+                <button
+                    onClick={() => {
+                        homeRef.current?.scrollIntoView({
+                            behavior: "smooth"
+                        })
+                    }}
+                ><img src={arrowUpIcon} /></button>
+                <div>
+                    <a href="https://www.facebook.com/fonziepruneda" target="_blank"><img src={facebookIcon}/></a>
+                    <a href="https://www.instagram.com/fonziepruneda/" target="_blank"><img src={instagramIcon}/></a>
+                    <a href="https://www.linkedin.com/in/fonziepruneda/" target="_blank"><img src={linkedInIcon}/></a>
+                    <a href="https://github.com/915fonzie/" target="_blank"><img src={githubIcon}/></a>
+                    <a href="mailto:alfonso@outlook.com"><img src={emailIcon}/></a>
+                </div>
+                <p>
+                    Alfonso Pruneda-Suarez © 2024
+                </p>
+            </footer>
         </main>
     )
 }
