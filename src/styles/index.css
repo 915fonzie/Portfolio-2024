@@ -308,7 +308,7 @@ section {
 .projects-section {
   display: flex;
   flex-direction: column;
-  max-width: 1500px;
+  max-width: 1800px;
   width: 95%;
   margin: 0 auto;
   margin-bottom: 10em;
