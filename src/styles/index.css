@@ -100,8 +100,11 @@ body, button {
   z-index: 1;
 }
 .heading h1 {
+  margin: 0;
+  margin-bottom: 0.4em;
   font-size: 5rem;
   font-weight: 400;
+  line-height: 1em;
 }
 .heading span {
   color: #138ee0;
@@ -123,6 +126,7 @@ body, button {
 
 .hero-btn {
   position: relative;
+  margin-top: 3em;
   font-size: 2.2rem;
   line-height: 0;
   width: 22rem;

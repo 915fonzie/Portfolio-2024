@@ -88,8 +88,11 @@ $hero-color: #138ee0;
     text-align: center;
     z-index: 1;
     h1 {
+        margin: 0;
+        margin-bottom: 0.4em;
         font-size: 5rem;
         font-weight: 400;
+        line-height: 1em;
     }
     span {
         color: $hero-color;
@@ -113,7 +116,7 @@ $hero-color: #138ee0;
 
 .hero-btn {
     position: relative;
-    // vertical-align: middle;
+    margin-top: 3em;
     font-size: 2.2rem;
     line-height: 0;
     width: 22rem;
