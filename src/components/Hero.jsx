@@ -19,7 +19,7 @@ export default function Hero({homeRef, aboutRef}) {
                     className='hero-btn'
                 >
                     <div>
-                        View my work <img src={arrowDownImg} />
+                        View My Work <img src={arrowDownImg} />
                     </div>
                 </button>
         </div>
