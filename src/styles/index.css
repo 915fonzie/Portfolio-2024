@@ -52,6 +52,11 @@ body, button {
   cursor: url("../assets/arrowhead.svg"), auto;
 }
 
+.home-container {
+  display: flex;
+  flex-direction: column;
+}
+
 .hero {
   position: relative;
   height: 100vh;
@@ -157,7 +162,7 @@ body, button {
   height: 75px;
   display: flex;
   justify-content: space-evenly;
-  z-index: 1;
+  z-index: 2;
 }
 .navbar button {
   background-color: transparent;
@@ -180,13 +185,16 @@ body, button {
   margin-top: 2em;
 }
 
-.about {
+section {
   background-color: transparent;
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 100vh;
   margin-bottom: 4em;
+}
+
+.about {
+  min-height: 900px;
 }
 
 .about-heading::before {
@@ -210,6 +218,7 @@ body, button {
   flex-wrap: wrap;
   width: 100%;
   max-width: 1800px;
+  vertical-align: middle;
 }
 
 .about-info {
@@ -278,10 +287,95 @@ body, button {
   font-size: 1.1rem;
 }
 
-.projects {
-  height: 100vh;
-  background-color: transparent;
-  min-height: 100vh;
+.projects-section {
+  display: flex;
+  flex-direction: column;
+  max-width: 1500px;
+  width: 95%;
+  margin: 0 auto 3em;
+}
+
+.projects-heading::before {
+  position: absolute;
+  content: "";
+  border-bottom: 18px solid #138ee0;
+  width: 13.5rem;
+  margin: 0 auto;
+  left: 2rem;
+  top: 3.6rem;
+  z-index: -1;
+}
+
+.project {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 4rem;
+}
+
+.project-img-container {
+  display: inline-block;
+  display: flex;
+  align-items: center;
+  width: 24rem;
+  height: 16rem;
+  background-color: #152c59;
+  transition: all 0.2s;
+}
+.project-img-container:hover {
+  transform: scale(0.95);
+}
+
+.project-img {
+  width: 85%;
+}
+
+.project-text {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.4rem;
+}
+.project-text .project-title {
+  margin: 0;
+  margin-top: 1em;
+}
+.project-text .project-description {
+  margin: 0;
+}
+.project-text .project-links {
+  display: flex;
+  gap: 1em;
+  font-weight: 500;
+  margin-top: 1em;
+}
+.project-text a {
+  display: inline-block;
+  color: #dddddd;
+  text-decoration: none;
+}
+.project-text a div {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0.8em 1.2em;
+  background-color: #138ee0;
+}
+
+.project-align-right {
+  align-items: flex-end;
+}
+.project-align-right .project-img-container {
+  justify-content: flex-end;
+}
+.project-align-right .project-text {
+  align-items: flex-end;
+  text-align: right;
 }
 
 .contact {
@@ -296,6 +390,10 @@ body, button {
   }
   .about-info p {
     width: 400px;
+  }
+  .project-img-container {
+    width: 38.75rem;
+    height: 25rem;
   }
 }
 @media screen and (min-width: 1000px) {
@@ -352,6 +450,54 @@ body, button {
   .logos {
     height: 75px;
   }
+  .project {
+    flex-direction: row;
+  }
+  .project-img-container {
+    width: 38.75rem;
+    height: 25rem;
+  }
+  .project-text {
+    margin-left: -2.5rem;
+    z-index: 1;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .project-text .project-links {
+    flex-direction: column;
+    font-size: 1.2rem;
+  }
+  .project-text a div {
+    background-color: transparent;
+    margin-bottom: 0;
+  }
+  .project-text a div::after {
+    position: absolute;
+    content: "";
+    height: 2px;
+    background-color: #138ee0;
+    width: 100%;
+    bottom: 1px;
+    display: block;
+    transform-origin: bottom;
+    transition: all 0.25s;
+    z-index: -1;
+  }
+  .project-text a div:hover::after {
+    height: 100%;
+  }
+  .project-align-right {
+    align-items: flex-start;
+    flex-direction: row-reverse;
+  }
+  .project-align-right .project-text {
+    margin-right: -2.5rem;
+    text-align: right;
+    max-width: 750px;
+  }
+  .project-align-right .project-text .project-links {
+    align-items: flex-end;
+  }
 }
 @media screen and (min-width: 1200px) {
   .about-content {
@@ -368,5 +514,14 @@ body, button {
   }
   .logos {
     height: 100px;
+  }
+  .project-img-container {
+    width: 46.5rem;
+    height: 30rem;
+  }
+}
+@media screen and (min-width: 1800px) {
+  .skill-item {
+    width: 250px;
   }
 }/*# sourceMappingURL=index.css.map */
