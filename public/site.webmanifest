@@ -1,6 +1,6 @@
 {
     "name":"Fonzies Portfolio Website",
-    "short_name":"Fonzies Contact",
+    "short_name":"Fonzies Portfolio",
     "icons":[{
         "src":"/android-chrome-192x192.png",
         "sizes":"192x192","type":"image/png"
