@@ -1,6 +1,11 @@
 import React from 'react'
 
-export default function Contact({contactRef}) {
+export default function Contact({ contactRef }) {
+    
+    function handleSubmit(e) {
+        e.preventDefault()
+    }
+
     return (
         <section className='contact' ref={contactRef}>
             <h1 className='section-heading'>Contact</h1>
@@ -11,7 +16,7 @@ export default function Contact({contactRef}) {
                 <textarea name='message' placeholder='Message' />
                 <input type="hidden" name="form-name" value="contact" />
 
-                <button type='submit'>SUBMIT</button>
+                <button type='submit' onClick={(event) => handleSubmit(event)}>SUBMIT</button>
             </form>
         </section>
     )
