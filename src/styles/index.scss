@@ -280,7 +280,8 @@ section {
     flex-direction: column;
     max-width: 1500px;
     width: 95%;
-    margin: 0 auto 3em;
+    margin: 0 auto;
+    margin-bottom: 10em;
 }
 
 .projects-heading {
@@ -370,9 +371,7 @@ section {
 }
 
 .contact {
-    height: 50vh;
-    background-color: transparent;
-    min-height: 100vh;
+
 }
 
 @media screen and (min-width: 600px) {
