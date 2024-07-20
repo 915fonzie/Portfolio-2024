@@ -2,9 +2,12 @@ import React from 'react'
 import Project from './Project/index'
 import componentsImg from '../assets/components-library.png'
 import quizzicalImg from '../assets/quizzical-app.png'
+import DessertAppImg from '../assets/dessert-menu-app.png'
+import clockAppImg from '../assets/clock-app-desktop-open.png'
 import movieWatchlistImg from '../assets/movie-watchlist-app.png'
 import learningJournalImg from '../assets/learning-journal.png'
 import exploreFashionImg from '../assets/explore-fashion.png'
+
 
 export default function Projects({projectsRef}) {
     return (
@@ -27,6 +30,24 @@ export default function Projects({projectsRef}) {
                 >
                     <Project.Title>Quizzical App</Project.Title>
                     <Project.Description>This project is a quiz app from a solo project on Scrimba. Uses public API to get questions on anime. Was built using React and CSS</Project.Description>
+            </Project>
+            <Project
+                    className="project"
+                    live="https://fonzies-clock-app.netlify.app/"
+                    repo="https://github.com/915fonzie/clock-app"
+                    imgUrl={clockAppImg}
+                >
+                    <Project.Title>Clock App</Project.Title>
+                    <Project.Description>This challenge project is from Frontend Mentor. Uses two different APIs to get users location and timezone. Was built using React, SASS, and React-Query framework</Project.Description>
+            </Project>
+            <Project
+                    className="project project-align-right"
+                    live="https://fonzies-dessert-menu.netlify.app/"
+                    repo="https://github.com/915fonzie/product-list-with-cart-main"
+                    imgUrl={DessertAppImg}
+                >
+                    <Project.Title>Dessert Menu with Checkout</Project.Title>
+                    <Project.Description>This challenge project is from Frontend Mentor. Was built using React and SASS</Project.Description>
             </Project>
             <Project
                     className="project"
