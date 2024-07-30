@@ -5,14 +5,23 @@ import quizzicalImg from '../assets/quizzical-app.png'
 import DessertAppImg from '../assets/dessert-menu-app.png'
 import clockAppImg from '../assets/clock-app-desktop-open.png'
 import movieWatchlistImg from '../assets/movie-watchlist-app.png'
-import learningJournalImg from '../assets/learning-journal.png'
 import exploreFashionImg from '../assets/explore-fashion.png'
+import restCountriesApiImg from '../assets/rest-countries-api.png'
 
 
 export default function Projects({projectsRef}) {
     return (
         <section className='projects-section' ref={projectsRef}>
             <h1 className='projects-heading section-heading'>Projects</h1>
+            <Project
+                    className="project project-align-right"
+                    live="https://fonzies-countries-api.netlify.app/"
+                    repo="https://github.com/915fonzie/rest-countries-api"
+                    imgUrl={restCountriesApiImg}
+                >
+                    <Project.Title>REST Countries API w/ Theme Switcher</Project.Title>
+                    <Project.Description>This challenge project is from Frontend Mentor. Uses one API to get data about all countries. Was built using React, SASS, React-Router, React-Query and Framer Motion.</Project.Description>
+            </Project>
             <Project
                     className="project"
                     live="https://fonzies-component-examples.netlify.app/"
@@ -60,15 +69,6 @@ export default function Projects({projectsRef}) {
             </Project>
             <Project
                     className="project project-align-right"
-                    live="https://fonzies-learning-journal.netlify.app/"
-                    repo="https://github.com/915fonzie/Learning-Journal"
-                    imgUrl={learningJournalImg}
-                >
-                    <Project.Title>Learning Journal App Demo</Project.Title>
-                    <Project.Description>This project is a learning journal app from a solo project on Scrimba. This projects main focus was to work with dynamic viewport sizes. Was built using Javascript and CSS</Project.Description>
-            </Project>
-            <Project
-                    className="project"
                     live="https://explorefashion.netlify.app/"
                     repo="https://github.com/915fonzie/Dynamic-Website-Demo"
                     imgUrl={exploreFashionImg}
