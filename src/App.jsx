@@ -46,7 +46,7 @@ export default function App() {
                     <a href="https://www.instagram.com/fonziepruneda/" target="_blank"><img src={instagramIcon}/></a>
                     <a href="https://www.linkedin.com/in/fonziepruneda/" target="_blank"><img src={linkedInIcon}/></a>
                     <a href="https://github.com/915fonzie/" target="_blank"><img src={githubIcon}/></a>
-                    <a href="mailto:alfonso@outlook.com"><img src={emailIcon}/></a>
+                    <a href="mailto:alfonso.pru@outlook.com"><img src={emailIcon}/></a>
                 </div>
                 <p>
                     Alfonso Pruneda-Suarez © 2024
